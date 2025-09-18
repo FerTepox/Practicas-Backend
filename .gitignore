@@ -1,0 +1,7 @@
+node_modules/
+
+#variable de entorno
+.env
+
+#archivos generados
+dist/
