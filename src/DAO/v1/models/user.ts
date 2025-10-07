@@ -13,6 +13,10 @@ sequelize.then((sequelize: Sequelize) => {
       type: DataTypes.STRING(50),
       allowNull: false
     },
+    RoleID: {
+      type: DataTypes.INTEGER,
+      defaultValue: false
+    },
     Password: {
       type: DataTypes.STRING(50),
       allowNull: false

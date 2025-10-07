@@ -9,6 +9,16 @@ export class UserController {
         this.userService = new UserService();
     }
 
+    public async createUser(req: Request, res: Response): Promise<void> {
+        try {
+            const userData = req.body;
+            const user = await this.userService.createUser(userData);
+            res.status(200).json(user);
+        } catch (error) {
+            console.log(error)
+            res.status(500).json({ message: 'Error al obtener roles' });
+        }
+    }
 
     //ESTE CONTROLLER ES PARA LOS ROLES
     public async getAllRoles(req: Request, res: Response): Promise<void> {

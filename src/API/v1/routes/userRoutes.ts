@@ -10,6 +10,8 @@ const userController = new UserController();
 //Si no aplica ninguna setting a la ruta se puede colocar NotApplicable, lo cual hara que solo se compruebe el token(ROL) y no el permiso
 //authorize("NotApplicable")
 
+router.post('/newUser', userController.createUser.bind(userController));
+
 //esta ruta es para mandar los roles que hay 
 router.get("/roles", userController.getAllRoles.bind(userController));
 router.get("/role/:RoleID", userController.getRolesByID.bind(userController));
