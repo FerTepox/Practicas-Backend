@@ -3,7 +3,8 @@ import cors from 'cors';
 
 import sequelize from './config/connectionDB';
 
-import routesUser from './API/v1/routes/userRoutes'
+import routesUser from './API/v1/routes/userRoutes';
+import routesAuth from './API/v1/routes/authRoutes';
 /*
 import routesAsset from '../../../API/v1/routes/assetRoutes';
 import routerInvoiceDetail from '../../../API/v1/routes/invoiceDetailRoutes';
@@ -55,6 +56,7 @@ class App {
     routes() {
 
         this.app.use('/api/users', routesUser)
+        this.app.use('/api/auth', routesAuth)
 
         /*
         this.app.use('/api/auth', routesAuth)
